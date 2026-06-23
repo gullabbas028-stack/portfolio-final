@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ── CSS Custom Properties ── */
+:root {
+  /* Dark theme (default) */
+  --bg-primary: #0A0F1E;
+  --bg-secondary: #0F1629;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --bg-card-hover: rgba(255, 255, 255, 0.08);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --text-primary: #F0F4FF;
+  --text-secondary: #8892B0;
+  --text-muted: #4A5568;
+  --accent-cyan: #00D4FF;
+  --accent-coral: #FF6B6B;
+  --accent-purple: #7C3AED;
+  --gradient-hero: linear-gradient(135deg, #0A0F1E 0%, #0F1629 50%, #0A1628 100%);
+  --gradient-accent: linear-gradient(135deg, #00D4FF, #7C3AED);
+  --shadow-card: 0 8px 32px rgba(0, 212, 255, 0.08);
+  --shadow-glow: 0 0 40px rgba(0, 212, 255, 0.15);
+  --navbar-bg: rgba(10, 15, 30, 0.85);
+}
+
+[data-theme="light"] {
+  --bg-primary: #F8FAFF;
+  --bg-secondary: #EEF2FF;
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --border-color: rgba(0, 0, 0, 0.08);
+  --text-primary: #0A0F1E;
+  --text-secondary: #4A5568;
+  --text-muted: #718096;
+  --accent-cyan: #0099BB;
+  --accent-coral: #E85555;
+  --accent-purple: #6D28D9;
+  --gradient-hero: linear-gradient(135deg, #EEF2FF 0%, #F0F4FF 50%, #E8EEFF 100%);
+  --gradient-accent: linear-gradient(135deg, #0099BB, #6D28D9);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 40px rgba(0, 153, 187, 0.1);
+  --navbar-bg: rgba(248, 250, 255, 0.9);
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ── Section Base ── */
+.section {
+  padding: 100px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Section Header ── */
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.section-title span {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-line {
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-accent);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: var(--gradient-accent);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1.5px solid var(--border-color);
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  transform: translateY(-2px);
+}
+
+/* ── Glassmorphism Card ── */
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(0, 212, 255, 0.2);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-4px);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--accent-cyan); border-radius: 3px; }
+
+/* ── Selection ── */
+::selection { background: rgba(0, 212, 255, 0.2); color: var(--text-primary); }
+
+/* ── Utility ── */
+.text-accent { color: var(--accent-cyan); }
+.text-secondary { color: var(--text-secondary); }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+
+@media (max-width: 768px) {
+  .section { padding: 72px 0; }
+  .section-header { margin-bottom: 48px; }
+}

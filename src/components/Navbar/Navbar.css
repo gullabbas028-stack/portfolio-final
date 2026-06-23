@@ -1,0 +1,126 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar--scrolled {
+  padding: 12px 0;
+  background: var(--navbar-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.logopic{
+   width: 50px;   
+  height: auto;  
+  object-fit: contain;
+
+}
+
+.navbar__logo span { color: var(--accent-cyan); }
+
+.navbar__links {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+}
+
+.navbar__link {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.navbar__link:hover,
+.navbar__link.active {
+  color: var(--accent-cyan);
+  background: rgba(0, 212, 255, 0.08);
+}
+
+.navbar__controls { display: flex; align-items: center; gap: 8px; }
+
+.theme-toggle,
+.hamburger {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.theme-toggle:hover,
+.hamburger:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+}
+
+.hamburger { display: none; }
+
+/* Mobile Menu */
+.mobile-menu {
+  background: var(--navbar-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 16px 24px 24px;
+}
+
+.mobile-menu ul { list-style: none; }
+
+.mobile-menu__link {
+  display: block;
+  padding: 14px 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-color);
+  transition: color 0.2s ease;
+}
+
+.mobile-menu__link:hover { color: var(--accent-cyan); }
+
+@media (max-width: 768px) {
+  .navbar__links { display: none; }
+  .hamburger { display: flex; }
+}
