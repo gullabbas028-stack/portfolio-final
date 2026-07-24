@@ -10,6 +10,8 @@ const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const validate = () => {
     const e = {};
@@ -20,16 +22,42 @@ const Contact = () => {
     return e;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length) { setErrors(errs); return; }
+
     setErrors({});
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+    setSubmitError('');
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/gullabbas028@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name.trim(),
+          email: form.email.trim(),
+          message: form.message.trim(),
+          _subject: `Portfolio message from ${form.name.trim()}`,
+          _replyto: form.email.trim(),
+          _template: 'table',
+        }),
+      });
+
+      if (!response.ok) throw new Error('Message could not be sent');
+
+      setSubmitted(true);
       setForm({ name: '', email: '', message: '' });
-    }, 4000);
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch {
+      setSubmitError('Sorry, your message could not be sent. Please email me directly instead.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -152,8 +180,10 @@ const Contact = () => {
                   {errors.message && <span className="form-error">{errors.message}</span>}
                 </div>
 
-                <button type="submit" className="btn btn-primary contact__submit">
-                  <FiSend size={16} /> Send Message
+                {submitError && <p className="form-submit-error" role="alert">{submitError}</p>}
+
+                <button type="submit" className="btn btn-primary contact__submit" disabled={isSubmitting}>
+                  <FiSend size={16} /> {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             )}
