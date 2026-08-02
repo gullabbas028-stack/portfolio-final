@@ -153,17 +153,6 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        className="hero__scroll"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-      >
-        <div className="scroll-mouse">
-          <div className="scroll-wheel" />
-        </div>
-        <span>Scroll Down</span>
-      </motion.div>
     </section>
   );
 };
