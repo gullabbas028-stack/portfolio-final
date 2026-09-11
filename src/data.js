@@ -100,10 +100,10 @@ export const projects = [
     color: "#10B981",
   },
   {
-    title: "Myntra Clone (E-Commerce Web App)",
-    description: "Myntra Clone is a modern e-commerce fashion website that replicates Myntra’s UI, offering a smooth and responsive online shopping experience with product listings, navigation, and a clean design. Built with React and Vite, it showcases frontend development skills and is deployed on Vercel for live demonstration.",
+    title: " Dukalink (E-Commerce Web App)",
+    description: "A modern e-commerce platform that provides a seamless online shopping experience, allowing users to explore products, manage their shopping cart, and enjoy a user-friendly interface.",
     tech: ["React", "Vite", "CSS"],
-    live: "https://myntra-clone-by-me.vercel.app/",
+    live: "https://code-alpha-dukalink.vercel.app",
     github: "https://github.com/gullabbas028-stack",
     color: "#EC4899",
   },
