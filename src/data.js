@@ -1,5 +1,13 @@
 // ── Portfolio Data ──
 
+import foodieHubImage from './assects/FoodieHub.png';
+import eCommerceStoreImage from './assects/E-Commerce Store.png';
+import unityAssetsImage from './assects/Assects 4 unity by Me.png';
+import amazonCloneImage from './assects/Amazon Clone.png';
+import arbazShoesImage from './assects/Arbaz Shoes.png';
+import dukalinkImage from './assects/Dukalink.png';
+import foodpandaImage from './assects/Foodpanda by me.png';
+
 export const personalInfo = {
   name: "Gull Abbas",
   title: "Frontend Developer",
@@ -24,7 +32,7 @@ export const education = [
 
 export const experience = [
   {
-    role: "Junior Web Developer (Learning Phase)",
+    role: "Mern stack Web Developer (Learning Phase)",
     company: "Self-Employed, Lahore",
     period: "Aug 2025 – Present",
     description: "Building real-world inspired web projects to sharpen frontend skills across HTML, CSS, JavaScript, and React.",
@@ -66,6 +74,7 @@ export const projects = [
     live: "https://arbaz-rasturant.vercel.app/",
     github: "https://github.com/gullabbas028-stack",
     color: "#FF6B6B",
+    image: foodieHubImage,
   },
   {
     title: "E-Commerce Store",
@@ -74,6 +83,7 @@ export const projects = [
     live: "https://ecomrance.vercel.app/",
     github: "https://github.com/gullabbas028-stack",
     color: "#00D4FF",
+    image: eCommerceStoreImage,
   },
   {
     title: "Assects 4 unity by Me",
@@ -82,14 +92,16 @@ export const projects = [
     live: "https://assects4unitybyme.vercel.app/",
     github: "https://github.com/gullabbas028-stack",
     color: "#7C3AED",
+    image: unityAssetsImage,
   },
   {
     title: "Amazon Clone (E-Commerce Web App)",
     description: "A responsive e-commerce web app built with React and Vite, featuring product listings, navigation, and modern UI design. Deployed on Vercel to demonstrate frontend development and real-world project skills.",
     tech: ["React", "CSS", "localStorage"],
-    live: "https://amazon-clone-by-me.vercel.app/",
+    live: "https://amazone-clone-by-me.vercel.app/",
     github: "https://github.com/gullabbas028-stack",
     color: "#F59E0B",
+    image: amazonCloneImage,
   },
   {
     title: "Arbaz Shoes (E-Commerce Web App)",
@@ -98,6 +110,7 @@ export const projects = [
     live: "https://arbaz-shoes.vercel.app/",
     github: "https://github.com/gullabbas028-stack",
     color: "#10B981",
+    image: arbazShoesImage,
   },
   {
     title: " Dukalink (E-Commerce Web App)",
@@ -106,6 +119,7 @@ export const projects = [
     live: "https://code-alpha-dukalink.vercel.app",
     github: "https://github.com/gullabbas028-stack",
     color: "#EC4899",
+    image: dukalinkImage,
   },
   {
     title: "Foodpanda by me ",
@@ -114,6 +128,7 @@ export const projects = [
     live: "https://foodpandabyyme.vercel.app/",
     github: "https://github.com/gullabbas028-stack",
     color: "#EC4899",
+    image: foodpandaImage,
   },
 ];
 

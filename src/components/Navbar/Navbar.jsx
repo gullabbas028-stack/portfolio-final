@@ -5,7 +5,7 @@ import { useTheme } from '../../context/ThemeContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Navbar.css';
 
-const navLinks = ['Home', 'About', 'Skills', 'Projects', 'Services', 'Contact'];
+const navLinks = ['Home', 'Projects', 'About', 'Skills', 'Experience', 'Contact'];
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();

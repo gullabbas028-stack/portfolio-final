@@ -8,7 +8,7 @@ const Services = () => {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="services" className="section services-section">
+    <section id="experience" className="section services-section">
       <div className="container">
         <motion.div
           className="section-header"

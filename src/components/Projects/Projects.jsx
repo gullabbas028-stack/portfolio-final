@@ -16,12 +16,10 @@ const ProjectCard = ({ project, index }) => {
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
     >
-      {/* Image placeholder */}
-      <div className="project-card__image" style={{ '--accent': project.color }}>
-        <div className="project-card__image-inner">
-          <span>{project.title[0]}</span>
-        </div>
-        {/* Replace with: <img src={project.image} alt={project.title} /> */}
+      <div
+        className="project-card__image"
+        style={{ '--accent': project.color, '--project-image': `url("${project.image}")` }}
+      >
         <div className="project-card__overlay">
           <a href={project.live} target="_blank" rel="noopener noreferrer" className="overlay-btn">
             <FiExternalLink size={18} /> Live Demo
