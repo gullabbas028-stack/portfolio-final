@@ -41,9 +41,10 @@ const useTypingEffect = (words, speed = 100, pause = 2000) => {
 
 const Hero = () => {
   const typedText = useTypingEffect([
-    'Frontend Developer',
-    'React Enthusiast',
-    'UI/UX Craftsman',
+    'MERN Developer',
+    'Full Stack Developer',
+    'React js Developer',
+    'UI/UX of websites',
     'Problem Solver',
   ]);
 
