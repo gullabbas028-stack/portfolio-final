@@ -107,7 +107,7 @@ const Hero = () => {
                 <FiMail size={16} /> Hire Me
               </button>
             </Link>
-            <a href="CV.png" download className="btn btn-outline">
+            <a href="/CV.pdf" download="CV.pdf" className="btn btn-outline">
               <FiDownload size={16} /> Download CV
             </a>
           </motion.div>
