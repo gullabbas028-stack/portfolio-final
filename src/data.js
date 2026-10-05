@@ -7,6 +7,10 @@ import amazonCloneImage from './assects/Amazon Clone.png';
 import arbazShoesImage from './assects/Arbaz Shoes.png';
 import dukalinkImage from './assects/Dukalink.png';
 import foodpandaImage from './assects/Foodpanda by me.png';
+import WorkflowImage from './assects/Workflow.png';
+import linkdinImage from './assects/Linkdin.png';
+import FaisaldildarImage from './assects/Faisaldildar.png';
+import PlaynexusImage from './assects/Playnexus.png';
 
 export const personalInfo = {
   name: "Gull Abbas",
@@ -17,7 +21,7 @@ export const personalInfo = {
   location: "Lahore, Canal Breeze Ali Town, 64000",
   github: " https://github.com/gullabbas028-stack",
   linkedin: " https://www.linkedin.com/in/gull-abbas-122255381",
-  twitter: " https://www.linkedin.com/in/gull-abbas-122255381",
+  twitter: " https://x.com/A35842Gull",
   bio: "I'm a passionate frontend developer currently pursuing my BSCS at Virtual University of Pakistan. I specialize in building responsive, modern web interfaces using the MERN stack. I love turning ideas into polished digital products.",
 };
 
@@ -77,6 +81,24 @@ export const projects = [
     image: foodieHubImage,
   },
   {
+    title: "Faisaldildar Real Estate Website",
+    description: "A modern real estate website showcasing properties for sale and rent.",
+    tech: ["Next.js", "Vite", "tailwindCSS", "vercel"],
+    live: "https://faisal-dildar-associates.vercel.app/",
+    github: "https://github.com/gullabbas028-stack",
+    color: "#10B981",
+    image: FaisaldildarImage,
+  },
+   {
+    title: " Dukalink (E-Commerce Web App)",
+    description: "A modern e-commerce platform that provides a seamless online shopping experience, allowing users to explore products, manage their shopping cart, and enjoy a user-friendly interface.",
+    tech: ["React", "Vite", "tailwindCSS", "vercel"],
+    live: "https://code-alpha-dukalink.vercel.app",
+    github: "https://github.com/gullabbas028-stack",
+    color: "#EC4899",
+    image: dukalinkImage,
+  },
+  {
     title: "E-Commerce Store",
     description: "Amazon/Myntra-inspired online shopping platform with product listings, filters, cart management, and a clean checkout flow.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -112,15 +134,7 @@ export const projects = [
     color: "#10B981",
     image: arbazShoesImage,
   },
-  {
-    title: " Dukalink (E-Commerce Web App)",
-    description: "A modern e-commerce platform that provides a seamless online shopping experience, allowing users to explore products, manage their shopping cart, and enjoy a user-friendly interface.",
-    tech: ["React", "Vite", "CSS"],
-    live: "https://code-alpha-dukalink.vercel.app",
-    github: "https://github.com/gullabbas028-stack",
-    color: "#EC4899",
-    image: dukalinkImage,
-  },
+
   {
     title: "Foodpanda by me ",
     description: "A responsive food delivery web app built with modern frontend technologies, featuring restaurant browsing, smooth navigation, and a clean user interface for an enhanced ordering experience..",
@@ -130,6 +144,33 @@ export const projects = [
     color: "#EC4899",
     image: foodpandaImage,
   },
+  {
+    title: "Workflow Automation",
+    description: "Streamline your development process with automated workflows for building, testing, and deploying your applications.",
+    tech: ["GitHub Actions", "CI/CD", "Automation"],
+    live: "https://code-alpha-workflow.vercel.app/",
+    github: "https://github.com/gullabbas028-stack",
+    color: "#8B5CF6",
+    image: WorkflowImage,
+  },
+  {
+    title: "LinkedIn Clone",
+    description: "A responsive LinkedIn clone built with React, featuring user profiles, connections, and a modern interface for professional networking.",
+    tech: ["React", "Vite", "tailwindCSS",  "MangoDB", "vercel"],
+    live: "https://linkdin-full-project-frontand.vercel.app/",
+    github: "https://github.com/gullabbas028-stack",
+    color: "#3B82F6",
+    image: linkdinImage,
+  },
+  {
+    title: "Playnexus Gaming Website",
+    description: "A dynamic gaming website featuring the latest game releases, reviews, and a vibrant community for gamers.",
+    tech: ["Next.js", "Vite", "tailwindCSS", "vercel" , "mangoDB"],
+    live: "https://playnexus-two.vercel.app/",
+    github: "https://github.com/gullabbas028-stack",
+    color: "#8B5CF6",
+    image: PlaynexusImage,
+  }
 ];
 
 export const services = [

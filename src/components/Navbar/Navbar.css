@@ -37,10 +37,10 @@
 }
 
 .logopic{
-   width: 50px;   
-  height: auto;  
+  width: 50px;
+  height: auto;
   object-fit: contain;
-
+  transform: scale(1.2);
 }
 
 .navbar__logo span { color: var(--accent-cyan); }
